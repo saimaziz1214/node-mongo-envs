@@ -1,0 +1,16 @@
+{
+  "name": "node-mongo-envs",
+  "version": "0.1.0",
+  "description": "Node.js + MongoDB API with staging/preprod/prod environment configs",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "prepare": "husky"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@commitlint/cli": "^21.2.4",
+    "@commitlint/config-conventional": "^21.2.4",
+    "husky": "^9.1.7"
+  }
+}
