@@ -1,16 +1,25 @@
 {
   "name": "node-mongo-envs",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Node.js + MongoDB API with staging/preprod/prod environment configs",
   "type": "module",
   "main": "src/server.js",
   "scripts": {
-    "prepare": "husky"
+    "prepare": "husky",
+    "start:staging": "cross-env NODE_ENV=staging node src/server.js",
+    "start:preprod": "cross-env NODE_ENV=preprod node src/server.js",
+    "start:prod": "cross-env NODE_ENV=prod node src/server.js"
   },
   "license": "ISC",
   "devDependencies": {
     "@commitlint/cli": "^21.2.4",
     "@commitlint/config-conventional": "^21.2.4",
+    "cross-env": "^10.1.0",
     "husky": "^9.1.7"
+  },
+  "dependencies": {
+    "dotenv": "^18.0.10",
+    "express": "^5.3.0",
+    "mongoose": "^9.12.3"
   }
 }
